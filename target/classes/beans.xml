@@ -14,5 +14,23 @@
 			<value>Hello World</value>
 		</constructor-arg>
 	</bean>
+	
+	<bean id="address" class="com.haresh.model.Address">
+		<property name="location" value="Vishrantwadi"> </property>
+		<property name="city" value="Pune"> </property>
+		<property name="pincode" value="411015"> </property>
+	</bean>
+	
+	<bean id="employee" class="com.haresh.model.Employee">
+		<property name="id" value="1"></property>
+		<property name="name" value="Haresh"></property>
+		<property name="address" ref="address" ></property>
+		<property name="phoneNumbers">
+			<list>
+				<value>9423499578</value>
+				<value>8208065147</value>
+			</list>
+		</property>
+	</bean>
 
 </beans>
